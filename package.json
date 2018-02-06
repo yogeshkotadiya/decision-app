@@ -1,0 +1,23 @@
+{
+  "name": "indecisionapp",
+  "version": "1.0.0",
+  "description": "React Training App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yogeshkotadiya/react-training-project.git"
+  },
+  "author": "Yogesh Kotadiya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yogeshkotadiya/react-training-project/issues"
+  },
+  "homepage": "https://github.com/yogeshkotadiya/react-training-project#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1"
+  }
+}
