@@ -17,7 +17,7 @@ const onFormSubmit = (e) => {
 };
 
 //Clear all Options
-const clearOptions = (e) => {
+const clearOptions = () => {
     app.options = [];
     renderOptions();
 };
@@ -32,7 +32,7 @@ const onGenrateOption = () => {
 //Render window function
 const renderOptions = () => {
 
-    let template = (
+    const template = (
         <div>
             <h2>{app.title}</h2>
 
