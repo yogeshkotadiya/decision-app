@@ -4,9 +4,9 @@
   "description": "React Training App",
   "main": "index.js",
   "scripts": {
-    "server": "live-server public/",
-    "build": "webpack --watch",
-    "babel": "babel src/scripts/main.js --out-file=public/scripts/app.js --presets=env,react --watch"
+    "start": "live-server public/",
+    "build": "webpack",
+    "dev-server": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -20,10 +20,12 @@
   "homepage": "https://github.com/yogeshkotadiya/react-training-project#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "live-server": "^1.2.0",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
     "babel-core": "^6.26.0",

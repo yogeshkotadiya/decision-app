@@ -6,34 +6,27 @@ import Form from './Form';
 
 export default class DecisionApp extends React.Component {
 
-    constructor(props){
-        super(props);
-        this.removeOptionsAll = this.removeOptionsAll.bind(this);
-        this.removeOption     = this.removeOption.bind(this);
-        this.addOption        = this.addOption.bind(this);
-        this.takeAction       = this.takeAction.bind(this);
-        this.state = {
-            options : []
-        }
+    state = {
+        options : []
     }
 
-    takeAction(){
+    takeAction = () => {
         const randomNum = Math.floor(Math.random() * this.state.options.length);
         const option = this.state.options[randomNum];
         alert(option);
     }
 
-    removeOptionsAll(){
+    removeOptionsAll = () => {
         this.setState( () => ({ options : [] }));
     }
 
-    removeOption(optionToRemove){
+    removeOption = (optionToRemove) => {
         this.setState((prevState) => ({
             options : prevState.options.filter((option) => optionToRemove !== option )
         }));
     }
 
-    addOption(option){
+    addOption = (option) => {
         if(!option){
             return 'Enter the Valid option';
         }else if(this.state.options.indexOf(option) > -1){
@@ -42,7 +35,7 @@ export default class DecisionApp extends React.Component {
         this.setState((prevState) => ({options : prevState.options.concat(option) }));
 }
 
-    render(){
+    render = () => {
         const title = 'Decision App';
         const subtitile = 'Let the computer take the decision for you.';
         return (
