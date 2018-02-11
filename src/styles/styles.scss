@@ -1,0 +1,177 @@
+$primary-color : #a5afd7;
+$color-purple: #8537c5;
+$bg-primary : #20222b;
+
+
+*,
+html{
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+    background-color: lighten($bg-primary, $amount: 10);
+}
+
+// Header
+
+.header {
+    background : $bg-primary;
+    margin-bottom: 4.5rem;
+    padding: 1.6rem 0;
+    text-align: center;
+
+    &__title {
+        font-size: 3rem;
+        color : #eee;
+    }
+    &__subtitle {
+        font-size: 1.4rem;
+        color: $primary-color;
+        font-weight: 400;
+    }
+}
+
+.button {
+    cursor: pointer;
+
+    &:disabled {
+        cursor: default;
+    }
+}
+
+//Container
+
+
+.container {
+    max-width: 40rem;
+    margin: 0 auto;
+    text-align: center;
+
+    .button__action {
+        padding: 2rem;
+        text-align: center;
+        border: none;
+        outline: none;
+        background-color: $color-purple;
+        color: #f9f9f9;
+        font-size: 1.6rem;
+        font-weight: 600;
+        border-bottom: .6rem solid darken($color-purple, 10%);
+        //box-shadow: 0 0.5rem 1rem #5d258b;
+        margin-bottom: 2rem;
+
+        &:disabled {
+            opacity: 0.4;
+        }
+    }
+
+    .options {
+        text-align: left;
+        padding: 1rem;
+        border-radius: .5rem 0.5rem 0 0;
+        background-color: $bg-primary;
+        font-size: 1.2rem;
+        color: #f9f9f9;
+
+        &__items{
+            padding: 0 1rem;
+            .item__list{
+                display: inline;
+                padding: 0.5rem;
+                &--btn {
+                    float: right;
+                    background-color: transparent;
+                    font-size: 1rem;
+                    color:$primary-color;
+                    border: none;
+                }
+            }
+        }
+    }
+
+    #error-message{
+        font-size: 1rem;
+        color: orangered;
+        background-color: $bg-primary;
+    }
+
+    .button__removeAll {
+        float: right;
+        display: inline;
+        background-color: transparent;
+        color : $primary-color;
+        border: none;
+        font-size: 1.4rem;
+    }
+
+    .form-input{
+        width: 80%;
+        padding: 0.2rem 0.5rem 0.5rem 0.5rem;
+        box-sizing: border-box;
+        background-color: lighten($bg-primary, 5%);
+        color: #f9f9f9;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 0 0 0 0.5rem;
+    }
+    .button__addOption {
+        width: 20%;
+        padding: 0.4rem;
+        font-size: 1rem;
+        background-color: $color-purple;
+        color: #f9f9f9;
+        border: none;
+        border-bottom: .3rem solid darken($color-purple, $amount: 10);
+    }
+}
+
+//Modal aka PopUp
+
+.ReactModalPortal > div {
+    opacity: 0;
+}
+.ReactModalPortal .ReactModal__Overlay{
+    transition: opacity 0.25s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.modal {
+    width: 20rem;
+    height: 10rem;
+    background-color: $bg-primary;
+    font-size: 1.2rem;
+    color: #f9f9f9;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    #modal-header{
+        margin-top: 0.5rem;
+    }
+    &__button{
+        background-color: $color-purple;
+        color: #f9f9f9;
+        border: none;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-bottom: 2px solid darken($color-purple, $amount: 10)
+    }
+}

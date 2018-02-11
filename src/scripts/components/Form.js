@@ -17,10 +17,10 @@ export default class Form extends React.Component {
     render(){
         return (
             <div>
-                {this.state.error && <p>{this.state.error}</p> }
+                {this.state.error && <p id="error-message">{this.state.error}</p> }
                 <form onSubmit={this.addOption}>
-                    <input type="text" name='option'/>
-                    <button type="submit">Add Option</button>
+                    <input className="form-input" type="text" name='option' placeholder="Add your options here"/>
+                    <button className="button__addOption" type="submit">Add Option</button>
                 </form>
             </div>
         );

@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
     entry : './src/scripts/main.js',
     output : {
-        path : path.join(__dirname, 'public','scripts'),
+        path : path.join(__dirname, 'public'),
         filename : 'app.bundle.js'
     },
 
@@ -13,6 +13,13 @@ module.exports = {
             loader : 'babel-loader',
             test : /\.js$/,
             exclude : /node_modules/
+        },{
+            test : /\.s?css$/,
+            use : [
+                'style-loader',
+                'css-loader',
+                'sass-loader'
+            ]
         }]
     },
     devtool : 'cheap-module-eval-source-map',

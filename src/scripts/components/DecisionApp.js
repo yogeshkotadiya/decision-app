@@ -3,17 +3,23 @@ import Header from './Header';
 import Action from './Action';
 import Options from './Options';
 import Form from './Form';
+import OptionModal from './OptionModal';
 
 export default class DecisionApp extends React.Component {
 
     state = {
-        options : []
-    }
+        options : [],
+        selectedOption : undefined
+    };
 
     takeAction = () => {
         const randomNum = Math.floor(Math.random() * this.state.options.length);
         const option = this.state.options[randomNum];
-        alert(option);
+        this.setState(() => ({ selectedOption : option }));
+    }
+
+    closeModal = () => {
+        this.setState(() => ({ selectedOption: undefined }));
     }
 
     removeOptionsAll = () => {
@@ -37,17 +43,21 @@ export default class DecisionApp extends React.Component {
 
     render = () => {
         const title = 'Decision App';
-        const subtitile = 'Let the computer take the decision for you.';
+        const subtitle = 'Let the computer take the decision for you.';
         return (
             <div>
                 <Header  title            = {title}
-                         subtitle         = {subtitile} />
-                <Action  hasOptions       = {this.state.options.length > 0 }
-                         takeAction       = {this.takeAction} />
-                <Options options          = {this.state.options}
-                         removeOption     = {this.removeOption}
-                         removeOptionsAll = {this.removeOptionsAll}/>
-                <Form    addOption        = {this.addOption}/>
+                         subtitle         = {subtitle} />
+                <div className="container">
+                    <Action  hasOptions       = {this.state.options.length > 0 }
+                             takeAction       = {this.takeAction} />
+                    <Options options          = {this.state.options}
+                             removeOption     = {this.removeOption}
+                             removeOptionsAll = {this.removeOptionsAll}/>
+                    <Form    addOption        = {this.addOption}/>
+                    <OptionModal selectedOption = {this.state.selectedOption}
+                            closeModal        = {this.closeModal}/>
+                </div>
             </div>
         );
     }
