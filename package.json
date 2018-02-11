@@ -4,28 +4,34 @@
   "description": "React Training App",
   "main": "index.js",
   "scripts": {
-    "start": "live-server public",
-    "build": "webpack --watch",
-    "dev-server": "webpack-dev-server"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "live-server": "live-server public",
+    "build-webpack": "webpack --watch",
+    "dev-server": "webpack-dev-server",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yogeshkotadiya/react-training-project.git"
+    "url": "git+https://github.com/yogeshkotadiya/decision-app.git"
   },
   "author": "Yogesh Kotadiya",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/yogeshkotadiya/react-training-project/issues"
   },
-  "homepage": "https://github.com/yogeshkotadiya/react-training-project#readme",
+  "homepage": "https://github.com/yogeshkotadiya/decision-app/",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.9",
+    "gh-pages": "^1.1.0",
     "live-server": "^1.2.0",
     "node-sass": "^4.7.2",
+    "react-scripts": "^1.1.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.1",
     "webpack": "^3.10.0",
