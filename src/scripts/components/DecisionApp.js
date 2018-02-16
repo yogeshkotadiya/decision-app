@@ -10,7 +10,10 @@ export default class DecisionApp extends React.Component {
     state = {
         options : [],
         selectedOption : undefined
-    };
+    }
+    componentWillUnmount(prevProps, prevState ){
+        localStorage.setItem('option', this.state.selectedOption);
+    }
 
     takeAction = () => {
         const randomNum = Math.floor(Math.random() * this.state.options.length);
