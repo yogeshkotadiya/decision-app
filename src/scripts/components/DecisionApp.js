@@ -31,7 +31,7 @@ export default class DecisionApp extends React.Component {
 
     removeOption = (optionToRemove) => {
         this.setState((prevState) => ({
-            options : prevState.options.filter((option) => optionToRemove !== option )
+            options : prevState.options.filter(option => optionToRemove !== option )
         }));
     }
 
@@ -41,7 +41,7 @@ export default class DecisionApp extends React.Component {
         }else if(this.state.options.indexOf(option) > -1){
             return 'This Option is already exists!';
         }
-        this.setState((prevState) => ({options : prevState.options.concat(option) }));
+        this.setState(prevState => ({options : prevState.options.concat(option) }));
 }
 
     render = () => {
