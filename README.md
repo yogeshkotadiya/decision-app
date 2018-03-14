@@ -25,4 +25,4 @@ npm deploy
 
 LICENSE [MIT](../blob/master/LICENSE)
 
-- Yogesh Kotadiya
+-Yogesh Kotadiya
