@@ -23,5 +23,5 @@ npm deploy
 
 ---
 
-LICENSE [MIT] (../blob/master/LICENSE)
+LICENSE [MIT](../blob/master/LICENSE)
 Yogesh Kotadiya
