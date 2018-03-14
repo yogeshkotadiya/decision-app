@@ -12,7 +12,16 @@ npm build-webpack
 ```bash
 npm build-webpack:prod
 ```
-### Dev Server
+#### Dev Server
 ```bash
 npm dev-server
 ```
+#### Deploy to Github
+```bash
+npm deploy
+```
+
+---
+
+LICENSE [MIT] (../blob/master/LICENSE)
+Yogesh Kotadiya
