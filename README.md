@@ -16,10 +16,6 @@ npm build-webpack:prod
 ```bash
 npm dev-server
 ```
-#### Deploy to Github
-```bash
-npm deploy
-```
 
 ---
 
